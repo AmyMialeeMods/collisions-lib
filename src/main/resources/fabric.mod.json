@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "collisionslib",
+  "version": "${version}",
+  "name": "Collisions Lib",
+  "description": "Makes all mobs have solid hitboxes.",
+  "authors": [
+    "AmyMialee"
+  ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/collisions-lib",
+    "issues": "https://github.com/AmyMialee/collisionslib/issues"
+  },
+  "license": "LGPL-3.0",
+  "icon": "assets/collisionslib/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "amymialee.collisionslib.client.CollisionsLibClient"
+    ],
+    "main": [
+      "amymialee.collisionslib.Collisionslib"
+    ]
+  },
+  "mixins": [
+    "collisionslib.mixins.json"
+  ],
+  "depends": {
+    "fabric": "*"
+  },
+  "custom": {
+    "modupdater": {
+      "strategy": "curseforge",
+      "projectID": 532887,
+      "strict": false
+    },
+    "modmenu": {
+      "links": {
+        "modmenu.discord": "https://discord.gg/P4dUsxv6An"
+      }
+    }
+  }
+}
