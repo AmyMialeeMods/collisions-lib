@@ -1,6 +1,8 @@
 package amymialee.collisionslib.items;
 
-import amymialee.collisionslib.client.LivingEntityAccessor;
+import amymialee.collisionslib.CollisionsLib;
+import net.minecraft.entity.attribute.AttributeContainer;
+import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -17,7 +19,11 @@ public class IntangibilityChangerItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
         if (!world.isClient) {
-            ((LivingEntityAccessor) user).setIntangible(!((LivingEntityAccessor) user).isIntangible());
+            if (user.getAttributeInstance(CollisionsLib.TANGIBLE).getBaseValue() == 0) {
+                user.getAttributeInstance(CollisionsLib.TANGIBLE).setBaseValue(1);
+            } else {
+                user.getAttributeInstance(CollisionsLib.TANGIBLE).setBaseValue(0);
+            }
             return TypedActionResult.success(itemStack, world.isClient());
         }
         return super.use(world, user, hand);

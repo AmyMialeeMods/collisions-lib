@@ -16,10 +16,10 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "amymialee.collisionslib.client.CollisionsLibClient"
+      "amymialee.collisionslib.CollisionsLibClient"
     ],
     "main": [
-      "amymialee.collisionslib.Collisionslib"
+      "amymialee.collisionslib.CollisionsLib"
     ]
   },
   "mixins": [
