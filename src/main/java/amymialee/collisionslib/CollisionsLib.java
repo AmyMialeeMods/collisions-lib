@@ -18,7 +18,7 @@ public class CollisionsLib implements ModInitializer {
     public static final Item THINIFIER = new SizeChangerItem(new Item.Settings().group(ItemGroup.TOOLS).maxCount(1).rarity(Rarity.RARE).fireproof());
     public static final Item PHASIFIER = new IntangibilityChangerItem(new Item.Settings().group(ItemGroup.TOOLS).maxCount(1).rarity(Rarity.RARE).fireproof());
     public static final EntityAttribute TANGIBLE = new ClampedEntityAttribute(
-            "attribute." + MODID + '.' + "tangibility", 0, 0, 1).setTracked(true);
+            "attribute." + MODID + '.' + "tangibility", 1, 0, 1).setTracked(true);
 
     public static boolean getTangibility(final LivingEntity entity) {
         return entity.getAttributeInstance(TANGIBLE) != null && (entity.getAttributeInstance(TANGIBLE).getValue() > 0);

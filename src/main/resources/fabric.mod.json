@@ -8,16 +8,13 @@
     "AmyMialee"
   ],
   "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/collisions-lib",
-    "issues": "https://github.com/AmyMialee/collisionslib/issues"
+    "homepage": "https://github.com/AmyMialeeMods/collisionslib",
+    "issues": "https://github.com/AmyMialeeMods/collisionslib/issues"
   },
-  "license": "LGPL-3.0",
+  "license": "All-Rights-Reserved",
   "icon": "assets/collisionslib/icon.png",
   "environment": "*",
   "entrypoints": {
-    "client": [
-      "amymialee.collisionslib.CollisionsLibClient"
-    ],
     "main": [
       "amymialee.collisionslib.CollisionsLib"
     ]
